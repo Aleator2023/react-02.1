@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black; /* Изменено на черный для видимости на белом фоне */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Создаём три столбца с равным распределением пространства */
+  gap: 30px; /* Задаём расстояние между картинками и рядами */
+  justify-items: center; /* Центрируем элементы внутри их ячеек по горизонтали */
+  align-items: center; /* Центрируем элементы внутри их ячеек по вертикали */
+  margin: 60px; /* Отступ от краёв контейнера */
+}
+
+.projects img {
+  width: 100%; /* Задаём ширину картинки равной ширине ячейки сетки */
+  height: auto; /* Устанавливаем высоту автоматически для сохранения пропорций */
+}
+
+
+button.selected {
+  background-color: black; /* Фоновый цвет выбранной кнопки */
+  color: white; /* Цвет текста для контраста */
+}
+
+button {
+  border: 1px solid #ccc; /* Граница */
+  background-color: white; /* Фоновый цвет */
+  padding: 10px 20px; /* Внутренние отступы */
+  margin: 5px; /* Внешние отступы */
+  cursor: pointer; /* Курсор в виде указателя */
+  transition: background-color 0.3s; /* Плавное изменение фона */
+}
+
+button:hover {
+  background-color: #f0f0f0; /* Цвет фона при наведении */
+}
